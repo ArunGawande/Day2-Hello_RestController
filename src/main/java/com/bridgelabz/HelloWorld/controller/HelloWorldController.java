@@ -27,7 +27,13 @@ public class HelloWorldController {
     public String showNameWithQuery(@RequestParam String firstName) {
         return " Hello "+ firstName +" From BridgeLabz";
     }
+ //Uc 3
+ //curl http://localhost:8080/hello/param/Arun -w "\n"
 
+    @GetMapping("/param/{name}")
+    public String showNameWithPathVariable(@PathVariable String name) {
+        return " Hello "+name+" From BridgeLabz";
+    }
 
 }
 
