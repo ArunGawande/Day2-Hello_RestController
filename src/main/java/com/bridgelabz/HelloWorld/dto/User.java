@@ -2,11 +2,11 @@ package com.bridgelabz.HelloWorld.dto;
 
 public class User {
 
-    private String firstName;
+    private static String firstName;
     private String lastName;
 
-    public String getFirstName() {
-        return firstName;
+    public static String getFirstName() {
+        return  firstName;
     }
 
     public void setFirstName(String firstName) {
