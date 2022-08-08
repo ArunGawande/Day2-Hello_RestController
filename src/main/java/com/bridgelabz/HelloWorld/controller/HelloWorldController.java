@@ -1,5 +1,6 @@
 package com.bridgelabz.HelloWorld.controller;
 
+import com.bridgelabz.HelloWorld.dto.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,13 +29,20 @@ public class HelloWorldController {
         return " Hello "+ firstName +" From BridgeLabz";
     }
  //Uc 3
- //curl http://localhost:8080/hello/param/Arun -w "\n"
+ //curl http://localhost:8081/hello/param/Arun -w "\n"
 
     @GetMapping("/param/{name}")
     public String showNameWithPathVariable(@PathVariable String name) {
         return " Hello "+name+" From BridgeLabz";
     }
+//UC4
+//"http://localhost:8081/hello/post"
 
+
+    @PostMapping("/post")
+    public String showDetail(@RequestBody User user) {
+        return "Hello "+ User.getFirstName()+" "+ user.getLastName()+" From BridgeLabz";
+    }
 }
 
 
