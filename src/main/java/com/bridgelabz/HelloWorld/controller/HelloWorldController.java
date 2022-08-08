@@ -43,6 +43,16 @@ public class HelloWorldController {
     public String showDetail(@RequestBody User user) {
         return "Hello "+ User.getFirstName()+" "+ user.getLastName()+" From BridgeLabz";
     }
+
+//Uc 5
+// localhost:8081/hello/put/Arun/?lastName=Gawande
+
+    @PutMapping("/put/{firstName}")
+    public String puts(@PathVariable String firstName , @RequestParam String lastName) {
+
+        return "Hello "+ firstName +" "+ lastName + " Fromm BridgeLabz";
+
+    }
 }
 
 
